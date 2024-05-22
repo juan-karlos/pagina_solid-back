@@ -10,12 +10,17 @@ controladoremails.prueba = async(req,res)=>{
 
 controladoremails.envio = async(req,res)=>{
     const {nombre,empresa,correo,telefono,mensaje}=req.body
+
+   const correos = ["juankyc179@gmail.com", "devsolidit@gmail.com"];
+const corre = correos.map(correoo => correoo);
+console.log(corre);
+
     const datos= await transporter.sendMail({
-        from: ` "Empresa" <${gmail}>`,
-        to: "juankyc179@gmail.com",
+        from: ` "Pagina-Solid-it" <${gmail}>`,
+        to: corre,
         subject:"Datos del cliente que necesita soporte",
-        text: `Necesitan informacion este Cliente su nombre es : <${nombre} 
-        la empresa es <${empresa}>,
+        text: `Necesitan informacion este Cliente su nombre es : ${nombre} 
+        la empresa es ${empresa},
         correo: ${correo},
         telefono: ${telefono},
 
