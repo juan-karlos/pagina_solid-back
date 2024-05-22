@@ -12,7 +12,8 @@ controladoremails.prueba = async(req,res)=>{
 controladoremails.envio = async(req,res)=>{
     const {nombre,empresa,correo,telefono,mensaje}=req.body
 
-   const correos = ["juankyc179@gmail.com", "devsolidit@gmail.com"];
+//    const correos = ["juankyc179@gmail.com", "devsolidit@gmail.com","soliditconsultoria@gmail.com"];
+const correos = ["rojas.varela.roberto@solid-it.net"];
 const corre = correos.map(correoo => correoo);
 console.log(corre);
 
