@@ -5,7 +5,8 @@ const controladoremails={};
 const gmail ="soliditconsultoria@gmail.com"
 
 controladoremails.prueba = async(req,res)=>{
-    console.log
+    console.log("Esto es una prueba de respuesta")
+    res.json({mesage:"Esto es una prueba de una respuesta "})
 }
 
 controladoremails.envio = async(req,res)=>{
